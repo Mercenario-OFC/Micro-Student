@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+clear
+
+echo "Bem vindo ao MetaForm, seus dados estao seguros!"
+sleep 5 ; clear
+echo "O usuario atual é: $USER \
+e esta localizado em: $HOME \
+o interpretador deste usuario é: $SHELL \
+"
+sleep 10 ; clear
+echo "Agora eu gostaria de ter mais informaçoes sobre voce."
+read -p "Qual é o seu nome completo? " name
+read -p "Qual é a sua idade? " old
+read -p "Onde voce mora $nome? " local
+read -p "Informe seu numero de telefone: " tel
+read -p "Qual é a sua escolaridade? " escol
+read -p "Voce trabalha atualmente? Se sim, me diga onde: " work
+clear ; echo "Muito obrigado por colaborar!" ; sleep 2 ; clear
+
+echo "Agora eu vou fazer um breve resumo sobre voce! ;)" sleep 2 ; clear
+
+echo "Vamos começar $name \n \
+Voce $old anos atras nasceu, a sua mae e sue pai te nomearam como $name, voce deve gostar desse nome, porque ate hoje nao trocou. :) \
+\nAtualmente voce mora em $local mas não sei se os seus $escol \
+foram concluidos aqui! \
+Espero que trabalhar na $work seja bom, e que voce seja\
+promovido logo!"
+
+read -p "\nTodos os dados estão corretos? " resp
+
+if [ $resp -eq s,S ]; then
+  clear ; echo "Obrigado por colaborar!" ; sleep 2 ; clear ; exit
+else 
+ clear ; echo "Desculpe, pretendo melhorar! :(" ; sleep 2 ; clear ; exit
+fi
+
+
+

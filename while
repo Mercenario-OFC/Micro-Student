@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+while :; do
+echo "----------------------"
+echo "1) Abrir Chrome"
+echo "2) Abrir o LeafPad"
+echo "3) Abrir XFCE terminal"
+echo "----------------------"
+
+read -p "Digite uma opçao: " option
+
+if [[ "$option" = "1" ]]; then 
+      clear      
+      google-chrome 
+      bash while
+elif [[ "$option" = "2" ]]; then
+      clear      
+      leafpad &
+      bash while
+elif [[ "$option" = "3" ]]; then
+      clear      
+      xfce4-terminal &
+      bash while
+else
+      { clear ; echo "Opçao nao existente" ; sleep 3s ; exit ; }
+fi
+done
